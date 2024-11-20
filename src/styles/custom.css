@@ -1,0 +1,187 @@
+.disable-infinity-animation {
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+.block_sticker {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  padding: 16px;
+  border-radius: 4px;
+  background: #414040;
+  margin: 4px;
+  width: 250px;
+  border: 1 solid rgba(255, 255, 255, 0.8);
+}
+.block_sticker .list {
+  margin: -2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.block_sticker .list .item {
+  width: 25%;
+  padding: 2px;
+}
+.block_sticker .list .item .imgDrop {
+  padding-top: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.block_sticker .list .item .imgDrop:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.page-sub .game_heading .block_light {
+  background-color: rgba(255, 255, 255, 0.1);
+  min-width: 150px;
+  border-radius: 30px;
+  overflow: hidden;
+  height: 24px;
+}
+@media (min-width: 1024px), ((min-width: 768px) and (orientation: portrait)) {
+  .page-sub .game_heading .block_light {
+    height: 36px;
+  }
+}
+.page-sub .game_heading .block_light .light {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 33.33%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.page-sub .game_heading .block_light .light + .light {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+.page-sub .game_heading .block_light .light:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.page-sub .game_heading .block_light .light2 .icon {
+  position: relative;
+}
+.page-sub .game_heading .block_light .light2 .icon:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  background-image: url(/images/icon/icon_light2.png);
+  background-size: auto 100%;
+  background-position: center right;
+}
+@media (min-width: 320px) and (orientation: portrait),
+  (max-width: 1023px) and (orientation: landscape) {
+  .page-sub .game_heading .block_light .light .icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+.page-sub .game_heading .block_light .light.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.page-sub .game_heading .block_switch {
+  display: inline-block;
+}
+.page-sub .game_heading .block_switch input {
+  display: none;
+}
+.page-sub .game_heading .block_switch input ~ label {
+  background-color: rgba(111, 111, 111, 0.4);
+}
+.page-sub .game_heading .block_switch input ~ label::after {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.page-sub .game_heading .block_switch input ~ label::before {
+  opacity: 0.5;
+  background-image: url(/images/icon/icon_mute.png);
+  left: 8px;
+  margin-left: 0;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+.page-sub .game_heading .block_switch input:checked ~ label {
+  border-color: #ffffff;
+  background: #0062a8;
+}
+.page-sub .game_heading .block_switch input:checked ~ label::before {
+  left: 100%;
+  opacity: 1;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  margin-left: -8px;
+  background-image: url(/images/icon/icon_volume.png);
+}
+.page-sub .game_heading .block_switch input:checked ~ label::after {
+  translate: 30px 0;
+  background: #ffaa00;
+  opacity: 0;
+}
+.page-sub .game_heading .block_switch label {
+  display: block;
+  width: 60px;
+  height: 28px;
+  padding: 3px;
+  border-radius: 15px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.page-sub .game_heading .block_switch label:before {
+  border: none;
+  width: 20px;
+  height: 20px;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.page-sub .game_heading .block_switch label:after {
+  position: static;
+  opacity: 1;
+  content: '';
+  display: inherit;
+  width: 20px;
+  height: 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+@keyframes shine {
+  100% {
+    background-position: calc(200px + 100%) center;
+  }
+}
+
+.shining-card {
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  background-size: 200px 100%;
+  animation: shine 2s infinite;
+}

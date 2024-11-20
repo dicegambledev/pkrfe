@@ -1,0 +1,30 @@
+.tabs_nav_item {
+  padding: 0 8px;
+  color: #6F6F6F;
+  text-align: center;
+  position: relative;
+}
+.tabs_nav_item:before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 2px solid #4113C6;
+  opacity: 0;
+  height: 1px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.tabs_nav_item span {
+  display: block;
+  padding: 16px;
+}
+.tabs_nav_item.active {
+  color: #4113C6;
+  font-weight: 500;
+}
+.tabs_nav_item.active:before {
+  opacity: 1;
+}
